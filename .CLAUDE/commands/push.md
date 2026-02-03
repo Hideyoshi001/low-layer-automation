@@ -1,5 +1,7 @@
 ---
 description: Commit and push changes to the current version branch with auto-generated commit message
+argument-hint: <project> - e.g., "low-layer-website"
+allowed-tools: Bash, Read, Grep, Glob
 ---
 
 # Push Command

@@ -1,29 +1,70 @@
 ---
 description: Systematic bug debugging with deep analysis and resolution
 argument-hint: <log|error|problem-description>
-allowed-tools: Bash, Read, Edit, MultiEdit, Write, Grep, Glob, Task, WebSearch, WebFetch
+allowed-tools: Bash, Read, Edit, Write, Grep, Glob, Task, WebSearch, WebFetch
 ---
 
-You are a systematic debugging specialist. Follow this ultra-deep analysis workflow to identify, understand, and resolve bugs.
+# Debug Command
+
+Systematic debugging specialist workflow to identify, understand, and resolve bugs through ultra-deep analysis.
 
 **You need to always ULTRA THINK.**
 
-## Workflow
+## Usage
 
-1. **ANALYZE**: Deep log/error analysis
+```bash
+/debug <log|error|problem-description>
+```
+
+**Examples:**
+```bash
+/debug "TypeError: Cannot read property 'id' of undefined"
+/debug @logs/error.log
+/debug "API returns 500 on user creation"
+```
+
+## Workflow Context
+
+This command is used for systematic bug resolution:
+
+```
+1. /debug <error>              # ← THIS COMMAND (analyze and fix)
+2. [verify fix]                # Test the solution
+3. /changelog <project>        # Document the fix
+4. /push <project>             # Commit the fix
+```
+
+## Instructions
+
+When the user invokes `/debug <error>`, execute the following steps:
+
+### Step 0: Parse Input
+
+Identify the type of input:
+- Error message string
+- Log file path (@logs/...)
+- Problem description
+
+### Step 1: Analyze
+
+Deep log/error analysis:
 - Parse the provided log/error message carefully
 - Extract key error patterns, stack traces, and symptoms
 - Identify error types: runtime, compile-time, logic, performance
 - **CRITICAL**: Document exact error context and reproduction steps
 
-2. **EXPLORE**: Targeted codebase investigation
-- Launch **parallel subagents** to search for error-related code (`explore-codebase`, `explore-docs`, `websearch`)
+### Step 2: Explore
+
+Targeted codebase investigation:
+- Launch **parallel subagents** to search for error-related code
 - Search for similar error patterns in codebase using Grep
 - Find all files related to the failing component/module
 - Examine recent changes that might have introduced the bug
 - **ULTRA THINK**: Connect error symptoms to potential root causes
 
-3. **ULTRA-THINK**: Deep root cause analysis
+### Step 3: Ultra-Think
+
+Deep root cause analysis:
 - **THINK DEEPLY** about the error chain: symptoms → immediate cause → root cause
 - Consider all possible causes:
   - Code logic errors
@@ -35,21 +76,27 @@ You are a systematic debugging specialist. Follow this ultra-deep analysis workf
 - **CRITICAL**: Map the complete failure path from root cause to visible symptom
 - Validate hypotheses against the evidence
 
-4. **RESEARCH**: Solution investigation
-- Launch **parallel subagents** for web research (`websearch`)
+### Step 4: Research
+
+Solution investigation:
+- Launch **parallel subagents** for web research
 - Search for similar issues and solutions online
 - Check documentation for affected libraries/frameworks
 - Look for known bugs, workarounds, and best practices
 - **THINK**: Evaluate solution approaches for this specific context
 
-5. **IMPLEMENT**: Systematic resolution
+### Step 5: Implement
+
+Systematic resolution:
 - Choose the most appropriate solution based on analysis
 - Follow existing codebase patterns and conventions
 - Implement minimal, targeted fixes
 - **STAY IN SCOPE**: Fix only what's needed for this specific bug
 - Add defensive programming where appropriate
 
-6. **VERIFY**: Comprehensive testing
+### Step 6: Verify
+
+Comprehensive testing:
 - Test the specific scenario that was failing
 - Run related tests to ensure no regressions
 - Check edge cases around the fix
@@ -77,19 +124,22 @@ You are a systematic debugging specialist. Follow this ultra-deep analysis workf
 - Check for timing/concurrency issues
 - Validate assumptions about data/state
 
-## Execution Rules
+## Error Handling
+
+| Symptom | Investigation | Common Causes |
+|---------|---------------|---------------|
+| TypeError | Check null/undefined values | Missing data, async timing |
+| 500 Error | Check server logs | Unhandled exception, DB error |
+| Timeout | Check network/async code | Slow query, infinite loop |
+| Memory | Check object references | Leaks, large allocations |
+
+## Notes
 
 - **ULTRA THINK** at each phase transition
 - Use parallel agents for comprehensive investigation
 - Document findings and reasoning at each step
 - **NEVER guess** - validate all hypotheses with evidence
 - **MINIMAL CHANGES**: Fix root cause, not symptoms
-- Test thoroughly before declaring resolution complete
-
-## Priority
-
-Understanding > Speed > Completeness. Every bug must be fully understood before attempting fixes.
-
----
+- Priority: Understanding > Speed > Completeness
 
 User: $ARGUMENTS

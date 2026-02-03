@@ -1,5 +1,7 @@
 ---
 description: Complete release workflow - PR, merge, tag, and GitHub release with release notes
+argument-hint: <project> [version] - e.g., "low-layer-website", "low-layer-website 1.2.0"
+allowed-tools: Bash, Read, Edit, Write, Grep, Glob
 ---
 
 # Release Workflow

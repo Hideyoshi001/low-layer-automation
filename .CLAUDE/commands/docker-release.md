@@ -8,6 +8,8 @@ allowed-tools: Bash, Read
 
 Build a Docker image for a project and push it to GitHub Container Registry (ghcr.io), then update the GitHub release with the image reference.
 
+**You need to always ULTRA THINK.**
+
 ## Usage
 
 ```bash

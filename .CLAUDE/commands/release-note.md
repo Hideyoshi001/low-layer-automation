@@ -1,5 +1,7 @@
 ---
 description: Generate a release note document from CHANGELOG.md for GitHub releases
+argument-hint: <project> [version] - e.g., "low-layer-website", "low-layer-website 1.2.0"
+allowed-tools: Read, Write, Grep, Glob
 ---
 
 # Release Note Generator

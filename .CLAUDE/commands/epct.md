@@ -1,36 +1,122 @@
 ---
 description: Explore codebase, create implementation plan, code, and test following EPCT workflow
+argument-hint: <feature-description|ticket>
+allowed-tools: Bash, Read, Edit, Write, Grep, Glob, Task, WebSearch, WebFetch
 ---
 
-# Explore, Plan, Code, Test Workflow
+# EPCT Command
 
-At the end of this message, I will ask you to do something.
-Please follow the "Explore, Plan, Code, Test" workflow when you start.
+Explore-Plan-Code-Test workflow for implementing features systematically with thorough analysis.
 
-## Explore
+**You need to always ULTRA THINK.**
 
-First, use parallel subagents to find and read all files that may be useful for implementing the ticket, either as examples or as edit targets. The subagents should return relevant file paths, and any other info that may be useful.
+## Usage
 
-## Plan
+```bash
+/epct <feature-description|ticket>
+```
 
-Next, think hard and write up a detailed implementation plan. Don't forget to include tests, lookbook components, and documentation. Use your judgement as to what is necessary, given the standards of this repo.
+**Examples:**
+```bash
+/epct "Add user authentication with OAuth"
+/epct "Implement dark mode toggle"
+/epct "Refactor database connection pooling"
+```
 
-If there are things you are not sure about, use parallel subagents to do some web research. They should only return useful information, no noise.
+## Workflow Context
 
-If there are things you still do not understand or questions you have for the user, pause here to ask them before continuing.
+This command guides complete feature implementation:
 
-## Code
+```
+1. /epct <feature>             # ← THIS COMMAND (full implementation)
+2. /changelog <project>        # Document the changes
+3. /push <project>             # Commit the work
+```
 
-When you have a thorough implementation plan, you are ready to start writing code. Follow the style of the existing codebase (e.g. we prefer clearly named variables and methods to extensive comments). Make sure to run our autoformatting script when you're done, and fix linter warnings that seem reasonable to you.
+## Instructions
 
-## Test
+When the user invokes `/epct <feature>`, execute the following steps:
 
-Use parallel subagents to run tests, and make sure they all pass.
+### Step 1: Explore
 
-If your changes touch the UX in a major way, use the browser to make sure that everything works correctly. Make a list of what to test for, and use a subagent for this step.
+Use parallel subagents to find and read all files that may be useful:
+- Search for existing similar implementations as examples
+- Find files that will need modification
+- Identify test patterns in the codebase
+- Locate documentation and configuration files
+- **ULTRA THINK**: What patterns exist? What can be reused?
 
-If your testing shows problems, go back to the planning stage and think ultrahard.
+Subagents should return:
+- Relevant file paths
+- Code patterns found
+- Useful context for implementation
 
-## Write up your work
+### Step 2: Plan
 
-When you are happy with your work, write up a short report that could be used as the PR description. Include what you set out to do, the choices you made with their brief justification, and any commands you ran in the process that may be useful for future developers to know about.
+Think hard and write up a detailed implementation plan:
+- List all files to create or modify
+- Include tests, components, and documentation
+- Use your judgement for what's necessary given repo standards
+- **CRITICAL**: If unsure, launch parallel subagents for web research
+
+**Before proceeding:**
+- If there are ambiguities, pause and ask the user
+- Present the plan for confirmation
+- **ULTRA THINK**: Is this the right approach?
+
+### Step 3: Code
+
+When you have a thorough implementation plan, start writing code:
+- Follow the style of the existing codebase
+- Prefer clearly named variables/methods over extensive comments
+- Implement incrementally, testing as you go
+- Run autoformatting when done
+- Fix reasonable linter warnings
+- **STAY IN SCOPE**: Build exactly what's planned
+
+### Step 4: Test
+
+Use parallel subagents to run tests:
+- Run unit tests for modified code
+- Run integration tests if applicable
+- For UX changes, use browser to verify functionality
+- Make a checklist of scenarios to test
+
+**If testing shows problems:**
+> Go back to Step 2 and **ULTRA THINK** about what went wrong.
+
+### Step 5: Write Up
+
+When happy with your work, write a short report for PR description:
+- What you set out to do
+- Choices made with brief justification
+- Commands run that may be useful for future developers
+- Any follow-up tasks identified
+
+## Quality Checklist
+
+Before completing:
+- [ ] Code follows existing patterns
+- [ ] All tests pass
+- [ ] No linter warnings
+- [ ] Documentation updated if needed
+- [ ] Changes are minimal and focused
+
+## Error Handling
+
+| Issue | Action |
+|-------|--------|
+| Tests failing | Analyze errors, go back to Plan step |
+| Unclear requirements | Ask user for clarification |
+| Missing dependencies | Research and propose additions |
+| Conflicts with existing code | Propose refactoring approach |
+
+## Notes
+
+- **ULTRA THINK** at each phase transition
+- Use parallel agents for comprehensive exploration
+- Document findings and reasoning at each step
+- Test thoroughly before completion
+- Priority: Correctness > Completeness > Speed
+
+User: $ARGUMENTS

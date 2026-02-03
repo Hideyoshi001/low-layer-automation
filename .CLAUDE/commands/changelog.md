@@ -1,5 +1,7 @@
 ---
 description: Add an entry to CHANGELOG.md based on current changes
+argument-hint: <project> - e.g., "low-layer-website"
+allowed-tools: Bash, Read, Edit, Write, Grep, Glob
 ---
 
 # Changelog Update Command
