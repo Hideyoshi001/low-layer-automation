@@ -321,3 +321,5 @@ When `/release` is called:
 2. PR is merged to main (merge commit or squash based on preference)
 3. Tag is created on the merge commit
 4. Release notes are generated from CHANGELOG.md
+
+User: $ARGUMENTS

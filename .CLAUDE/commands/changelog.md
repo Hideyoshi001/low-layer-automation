@@ -310,3 +310,5 @@ If adding a "Fixed" entry but `### Fixed` doesn't exist in the version section, 
 # Ready to release
 /release low-layer-website      # Finalize version
 ```
+
+User: $ARGUMENTS

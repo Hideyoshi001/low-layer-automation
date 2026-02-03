@@ -201,3 +201,5 @@ Before outputting, verify:
 - **Features**: Technical but accessible, include practical examples
 - **Breaking Changes**: Clear warnings, helpful migration paths
 - **Installation**: Direct, step-by-step instructions
+
+User: $ARGUMENTS

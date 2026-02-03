@@ -394,3 +394,5 @@ git -C "$PROJECT" checkout main
 git -C "$PROJECT" revert <merge-commit> --no-edit
 git -C "$PROJECT" push origin main
 ```
+
+User: $ARGUMENTS
