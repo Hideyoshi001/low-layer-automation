@@ -77,8 +77,8 @@ Available licenses in `.CLAUDE/licenses/`:
 
 | License | File | Usage |
 |---------|------|-------|
-| **LOW-LAYER** | [LICENSE](.CLAUDE/licenses/LICENSE) | Proprietary projects (5 user free tier) |
-| **MIT** | [MIT](.CLAUDE/licenses/MIT) | Open source projects |
+| **LOW-LAYER** | [low-layer.license](.CLAUDE/licenses/low-layer.license) | Proprietary projects (5 user free tier) |
+| **MIT** | [mit.license](.CLAUDE/licenses/mit.license) | Open source projects |
 
 > **Rule**: When creating a new project, **always ask the user which license to apply** if not specified. Never assume a default license.
 

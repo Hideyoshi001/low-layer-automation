@@ -39,8 +39,8 @@ low-layer-automation/
 │   │   ├── git-workflow.md          # Branching strategy
 │   │   └── changelog-standards.md   # Changelog format
 │   ├── licenses/                    # License templates
-│   │   ├── LICENSE                  # LOW-LAYER proprietary license
-│   │   └── MIT                      # MIT license template
+│   │   ├── low-layer.license        # LOW-LAYER proprietary license
+│   │   └── mit.license              # MIT license template
 │   └── commands/                    # Custom slash commands
 │       ├── changelog.md             # /changelog - Add changelog entries
 │       ├── push.md                  # /push - Commit and push
