@@ -80,6 +80,12 @@ Available licenses in `.CLAUDE/licenses/`:
 | **LOW-LAYER** | [low-layer.license](.CLAUDE/licenses/low-layer.license) | Proprietary projects (5 user free tier) |
 | **MIT** | [mit.license](.CLAUDE/licenses/mit.license) | Open source projects |
 
+Each license file contains metadata (badge, readme text, placeholders) in a header block. When applying a license:
+1. Copy the file to `LICENSE` (without the metadata header)
+2. Replace placeholders if any (`[YEAR]`, `[COPYRIGHT HOLDER]`)
+3. Use the `badge` for README header
+4. Use the `readme` text for README License section
+
 > **Rule**: When creating a new project, **always ask the user which license to apply** if not specified. Never assume a default license.
 
 > **Important**: Always consult these standards when generating code or documentation.

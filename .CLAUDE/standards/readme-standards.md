@@ -14,7 +14,7 @@ All `README.md` files in LOW-LAYER projects MUST follow this standardized struct
 [![Tech1](https://img.shields.io/badge/Tech1-Version-COLOR?style=for-the-badge&logo=LOGO&logoColor=white)](URL)
 [![Tech2](https://img.shields.io/badge/Tech2-Version-COLOR?style=for-the-badge&logo=LOGO&logoColor=white)](URL)
 
-[![License: LOW-LAYER](https://img.shields.io/badge/License-LOW--LAYER-blue.svg)](LICENSE)
+[LICENSE_BADGE]
 [![Tests](https://img.shields.io/badge/Tests-XX%20passed-success)](./tests/)
 [![Coverage](https://img.shields.io/badge/Coverage-XX%25-green)](./tests/)
 
@@ -24,6 +24,8 @@ All `README.md` files in LOW-LAYER projects MUST follow this standardized struct
 
 ---
 ```
+
+> **License Badge**: Replace `[LICENSE_BADGE]` with the appropriate badge based on the license chosen from `.CLAUDE/licenses/`. See license files for badge format.
 
 **Badge Categories:**
 - **Technology Stack**: Node.js, Python, Go, Docker, Kubernetes, etc.
@@ -269,11 +271,7 @@ command to diagnose
 ```markdown
 ## License
 
-This project is licensed under the [LOW-LAYER Source Available License](LICENSE).
-
-- **Free** for up to 5 users
-- **Commercial license** required for larger teams
-- Contact: contact@low-layer.com
+[LICENSE_TEXT]
 
 ---
 

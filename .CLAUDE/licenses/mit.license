@@ -1,3 +1,10 @@
+# ---
+# name: MIT License
+# badge: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+# readme: This project is licensed under the [MIT License](LICENSE).
+# placeholders: [YEAR], [COPYRIGHT HOLDER]
+# ---
+
 MIT License
 
 Copyright (c) [YEAR] [COPYRIGHT HOLDER]
