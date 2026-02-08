@@ -32,9 +32,12 @@ low-layer-automation/
 │   ├── settings.local.json          # Local permissions (not committed)
 │   ├── hooks/
 │   │   └── security-guard.sh        # Pre-execution security checks
-│   ├── tasks/
-│   │   ├── todo.md                  # Task tracking template
-│   │   └── lessons.md               # Lessons learned template
+│   ├── rules/                       # Workflow and task management
+│   │   ├── WORKFLOW.md              # AI orchestration guidelines
+│   │   ├── lessons.md               # Lessons learned and prevention rules
+│   │   └── todo.md                  # Task templates and patterns
+│   ├── tasks/                       # Active task plans (gitignored)
+│   │   └── README.md                # Task directory documentation
 │   ├── standards/                   # Externalized code standards
 │   │   ├── code-standards.md        # File headers, comments
 │   │   ├── readme-standards.md      # README template
@@ -53,16 +56,15 @@ low-layer-automation/
 │       ├── debug.md                 # /debug - Systematic debugging
 │       ├── epct.md                  # /epct - Explore-Plan-Code-Test
 │       ├── arch-update.md           # /arch-update - Document architecture changes
-│       ├── ask-command.md           # /ask-command - Create new commands
+│       ├── create-cmd.md            # /create-cmd - Create new commands
 │       └── web-design.md            # /web-design - UI/UX specialist
 │
-├── low-layer-architecture/           # Technical documentation (LOW-LAYER example)
+├── low-layer-architecture/           # Technical documentation (separate repo)
 │   ├── platform.md                  # Platform architecture
 │   ├── repositories.md              # Multi-repo structure
 │   └── infrastructure.md            # Infrastructure architecture
 │
-├── CLAUDE.md                        # Code generation standards
-├── WORKFLOW.md                      # AI orchestration guidelines
+├── CLAUDE.md                        # Project overview and standards index
 └── .gitignore
 ```
 
@@ -80,7 +82,7 @@ low-layer-automation/
 | `/debug` | Systematic bug debugging with deep analysis |
 | `/epct` | Explore-Plan-Code-Test workflow for features |
 | `/arch-update` | Document architectural decisions and changes |
-| `/ask-command` | Create and optimize new slash commands |
+| `/create-cmd` | Create and optimize new slash commands |
 | `/web-design` | Web development and UI/UX specialist mode |
 
 ---
@@ -161,9 +163,9 @@ The security guard ([.claude/hooks/security-guard.sh](.claude/hooks/security-gua
 ### 1. Copy Configuration
 
 ```bash
-# Copy the .CLAUDE directory and config files to your project
-cp -r .CLAUDE /path/to/your/project/
-cp CLAUDE.md WORKFLOW.md /path/to/your/project/
+# Copy the .claude directory and config files to your project
+cp -r .claude /path/to/your/project/
+cp CLAUDE.md /path/to/your/project/
 ```
 
 ### 2. Adapt Standards
@@ -230,7 +232,7 @@ Hook configuration and shared permissions:
 - **Git Workflow**: Version branches, feature branches, changelog-per-commit
 - **Changelog Format**: Keep a Changelog + Semantic Versioning
 
-### WORKFLOW.md
+### .claude/rules/WORKFLOW.md
 
 - **Operating Principles**: Correctness, minimal changes, verification
 - **Task Management**: File-based tracking in `.claude/tasks/`
